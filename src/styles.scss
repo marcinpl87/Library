@@ -1,0 +1,85 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+
+.navigation-card {
+    padding: 0;
+    margin: 0;
+    display: block;
+    list-style: none;
+    .navi-item {
+        .navi-icon {
+            display: flex;
+            align-items: center;
+        }
+        a {
+            display: flex;
+            padding: 0.75rem 1.5rem;
+            transition: all 0.15s ease;
+            color: $black;
+            position: relative;
+            text-decoration: none;
+            transition: all 1s ease;
+            &:hover:not(.active) {
+                background-color: $blue-100;
+                transition: all 1s ease;
+                color: $blue;
+                .navi-icon {
+                    transition: all 1s ease;
+                    color: $blue;
+                }
+            }
+            &.active {
+                cursor: default;
+                &:before, &:after {
+                    background-color: $blue;
+                    transition: all 0.15s ease;
+                    display: block;
+                    top: 0px;
+                    bottom: 0px;
+                    position: absolute;
+                    width: 4px;
+                    border-radius: 2px;
+                    content: " ";
+                }
+                &:before {
+                    left: 0;
+                }
+                &:after {
+                    right: 0;
+                }
+                .navi-icon {
+                    color: $blue;
+                }
+                .navi-text {
+                    color: $blue;
+                }
+            }
+            .navi-icon {
+                flex: 0 0 2rem;
+            }
+            .navi-text.font-size-lg {
+                flex-grow: 1;
+                transition: all 0.15s ease;
+                font-weight: 500;
+            }
+            .label {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                width: 20px;
+                font-size: 0.8rem;
+                color: #ffffff;
+                background-color: #F64E60;
+                border-radius: 0.42rem;
+                &.label-inline {
+                    width: auto;
+                    padding: 0.15rem 0.75rem;
+                    border-radius: 0.42rem;
+                }
+                &.label-success {
+                    color: #ffffff;
+                    background-color: #1BC5BD;
+                }
+            }
+        }
+    }
+}
