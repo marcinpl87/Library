@@ -1,7 +1,5 @@
-import { IconType } from 'react-icons';
-
 export type MenuItemType = {
     anchor: string;
-    iconComp: IconType;
+    iconComp: React.FC;
     linkComp: React.FC;
 };
