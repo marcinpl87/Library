@@ -83,3 +83,30 @@
         }
     }
 }
+
+.scrolltop {
+    color: #fff;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    cursor: pointer;
+    z-index: 100;
+    background-color: #009ef7;
+    box-shadow: 0 0.5rem 1.5rem 0.5rem rgba(0, 0, 0, 0.075);
+    transition: color .2s ease,background-color .2s ease;
+    border-radius: .475rem;
+    opacity: .3;
+    animation: animation-scrolltop .4s ease-out 1;
+    &:hover {
+        opacity: 1;
+    }
+    @media (max-width: 575px) {
+        bottom: 75px;
+        right: 100px;
+    }
+}

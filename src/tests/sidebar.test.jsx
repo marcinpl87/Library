@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import { HashRouter } from 'react-router-dom';
-import { Sidebar } from '../sidebar';
-import Item from '../sidebar/item';
+import { Sidebar } from '../components/sidebar';
+import Item from '../components/sidebar/item';
 
 const mockLink = vi.fn().mockImplementation(
     ({children}) => (<span>{children}</span>)

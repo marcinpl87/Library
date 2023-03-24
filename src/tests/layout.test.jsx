@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import { Layout } from '../layout';
+import { Layout } from '../components/layout';
 
 const mockSidebar = vi.fn().mockImplementation(() => (<div />));
 

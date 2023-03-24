@@ -1,9 +1,8 @@
-import React from 'react';
 import {
     render,
     fireEvent,
 } from '@testing-library/react';
-import { ScrollTop } from '../scroll-top';
+import { ScrollTop } from '../components/scroll-top';
 
 describe('ScrollTop', () => {
     const mockIcon = vi.fn().mockImplementation(
