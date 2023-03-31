@@ -9,10 +9,22 @@ describe('Layout', () => {
 
     beforeEach(() => {
         layoutContainer = render(
-            <Layout sidebar={mockSidebar} menu={[]}>
+            <Layout
+                className={randomString}
+                sidebar={mockSidebar}
+                menu={[]}
+            >
                 <h1>{randomString}</h1>
             </Layout>
         );
+    });
+
+    it('has the "container" class', () => {
+        expect(layoutContainer.getByTestId('layout-container')).toHaveClass('container');
+    });
+
+    it('has the class passed in className attribute', () => {
+        expect(layoutContainer.getByTestId('layout-container')).toHaveClass(randomString);
     });
 
     it('renders the Layout component', () => {

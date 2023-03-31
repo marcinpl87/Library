@@ -8,16 +8,25 @@ type SidebarProps = {
 type LayoutProps = {
     sidebar: React.FC<SidebarProps>;
     menu: MenuItemType[];
+    className?: string;
 }
 
 export const Layout = ({
     sidebar,
     menu,
+    className,
     children
 }: PropsWithChildren<LayoutProps>): JSX.Element => {
     const SidebarComponent: React.FC<SidebarProps> = sidebar;
     return (
-        <div className="container pt-5" data-testid="layout-container">
+        <div
+            className={`
+                ${className ? className : ''}
+                container
+                pt-5
+            `}
+            data-testid="layout-container"
+        >
             <div className="row">
                 <div className="col-sm-4 mb-4">
                     <SidebarComponent menu={menu} />
